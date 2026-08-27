@@ -2,8 +2,8 @@ ngx_addon_name=mikiri_waf_grpc_module
 
 WAF_SRCS="                                      \
            $ngx_addon_dir/mikiri_waf_grpc_module.c  \
-           $ngx_addon_dir/waf_grpc_parse.c            \
-           $ngx_addon_dir/waf_grpc_process.c            \
+           $ngx_addon_dir/waf_parse.c            \
+           $ngx_addon_dir/waf_process.c            \
            $ngx_addon_dir/waf_rules.c            \
            $ngx_addon_dir/waf_request_parser.c       \
            $ngx_addon_dir/waf_exchange.c               \
@@ -14,8 +14,8 @@ WAF_SRCS="                                      \
 WAF_DEPS="                                      \
            $ngx_addon_dir/mikiri_waf_grpc_module.h  \
            $ngx_addon_dir/mikiri_waf_http_module.h  \
-           $ngx_addon_dir/waf_grpc_parse.h            \
-           $ngx_addon_dir/waf_grpc_process.h            \
+           $ngx_addon_dir/waf_parse.h            \
+           $ngx_addon_dir/waf_process.h            \
            $ngx_addon_dir/waf_request_parser.h       \
            $ngx_addon_dir/waf_exchange.h               \
            $ngx_addon_dir/waf_shared_contexts.h     \

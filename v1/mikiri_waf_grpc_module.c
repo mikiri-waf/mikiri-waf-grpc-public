@@ -16,8 +16,8 @@
 #include "waf_request_parser.h"
 #include "waf_descriptions.h"
 
-#include "waf_grpc_parse.h"
-#include "waf_grpc_process.h"
+#include "waf_parse.h"
+#include "waf_process.h"
 
 static ngx_int_t ngx_http_grpc_eval(ngx_http_request_t *r,
     ngx_http_grpc_ctx_t *ctx, ngx_http_grpc_loc_conf_t *glcf);
