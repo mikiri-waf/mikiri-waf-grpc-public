@@ -129,6 +129,7 @@ typedef struct {
     unsigned                   header_sent:1;
     unsigned                   external_handlers:1;
     unsigned                   data_parsed:1;
+    unsigned                   filter_delayed:1;
     ngx_http_request_t        *request;
 } ngx_http_waf_grpc_ctx_t;
 
