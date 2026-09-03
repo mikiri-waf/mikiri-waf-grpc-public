@@ -1,17 +1,15 @@
 ngx_addon_name=mikiri_waf_grpc_module
 
+# Only the gRPC-specific sources are built here.  The shared WAF sources
+# (waf_rules.c, waf_request_parser.c, waf_exchange.c, waf_shared_contexts.c,
+# waf_connections.c, waf_captcha.c, waf_json.c, waf_memory.c) are built by the
+# mikiri_waf_http_module addon, which is required by this module and must be
+# added to the same nginx build.
+
 WAF_SRCS="                                      \
            $ngx_addon_dir/mikiri_waf_grpc_module.c  \
            $ngx_addon_dir/waf_parse.c            \
            $ngx_addon_dir/waf_process.c            \
-           $ngx_addon_dir/waf_rules.c            \
-           $ngx_addon_dir/waf_request_parser.c       \
-           $ngx_addon_dir/waf_exchange.c               \
-           $ngx_addon_dir/waf_shared_contexts.c     \
-           $ngx_addon_dir/waf_connections.c     \
-           $ngx_addon_dir/waf_captcha.c     \
-           $ngx_addon_dir/waf_json.c     \
-           $ngx_addon_dir/waf_memory.c     \
            "
 WAF_DEPS="                                      \
            $ngx_addon_dir/mikiri_waf_grpc_module.h  \
